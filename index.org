@@ -1,0 +1,34 @@
+#+OPTIONS: toc:nil
+#+OPTIONS: author:nil
+#+OPTIONS: creator:nil
+#+OPTIONS: date:nil
+#+OPTIONS: num:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./css/index.css"/>
+#+HTML_HEAD: <script src="./script/modify_a.js" />
+@@html:<section class = "bio">@@
+@@html:<div class = "bio-left">@@
+[[file:pic/photo.jpg]]
+@@html:</div>@@
+@@html:<div class = "bio-right">@@
+* Xiaoyu Chen (陈小羽)
+I’m currently a first-year Ph.D. student at Department of Computer Science and Technology, [[http://www.nju.edu.cn/][Nanjing University]] and a member of [[http://tcs.nju.edu.cn][CS Theory Group]]. I’m advised by Professor [[http://tcs.nju.edu.cn/yinyt/Yitong_Yin_homepage.html][Yitong Yin]].
+
+Before I joined Nanjing University, I obtained B.Eng. degree from [[http://www.uestc.edu.cn/][University of Electronic Science and Technology of China]] in June 2020, where I majored in Computer Science and Technology and was advised by Professor [[https://sites.google.com/site/myxiao/Home][Mingyu Xiao]] and Professor [[http://en.uestc.edu.cn/info/1074/2709.htm][Yi Zhou]]. In this period, I mainly focus on design and analysis exact exponential algorithms for optimization problems on graph such as maximum weighted independent set or maximum relaxed cliques.
+@@html:</div>@@
+@@html:</section>@@
+
+-----
+
+Email: 2016060106020@std.uestc.edu.cn
+
+Office: Room 412, Department of Computer Science and Technology, Nanjing University Xianlin Campus
+
+-----
+
+* Research Interests
+I'm interested in design and analysis of algorithms, especially approximate sampling and couting algorithms.
+
+* Awards & Honors
+  | Silver Medal of The ACM-ICPC Asia Regional Contest, Beijing Site | 2017 |
+  | Rank 8 of IEEEXtreme 12.0 Programming Competition                | 2018 |
+  | Outstanding Graduate (优秀毕业生) of UESTC                            | 2020 |
