@@ -15,6 +15,11 @@ p, a {
     font-size: 17px;
 }
 
+a {
+    color: gray;
+    text-decoration: none;
+}
+
 div.outline-2 {
     margin-top: 50px;
 }
@@ -28,8 +33,34 @@ div.bio-left img {
     width: 230px;
 }
 
+.avatar img {
+    clip-path: circle(106px at 114px 114px);
+}
+
+div.avatar {
+    clip-path: circle(113px at 114px 114px);
+    background: #607D8B;
+}
+
+div.nju img {
+    width: 50px;
+}
+
+div.nju {
+    height: 0px;
+    position: relative;
+    left: 158px;
+    top: 177px;
+    z-index: 1;
+}
+
 div.bio-left {
     float: left;
+}
+
+h2#chinese-name {
+    font-size: 50px;
+    font-family: cursive;
 }
 
 div.bio-right {

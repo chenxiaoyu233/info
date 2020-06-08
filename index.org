@@ -6,22 +6,19 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./css/index.css"/>
 #+HTML_HEAD: <script src="./script/modify_a.js" />
 @@html:<section class = "bio">@@
-@@html:<div class = "bio-left">@@
-[[file:pic/photo.jpg]]
-@@html:</div>@@
+@@html:
+<div class = "bio-left"> 
+    <div class = "nju"> <img src = "pic/nju.png" alt = "nju.png"> </div>
+    <div class = "avatar"> <img src = "pic/photo.jpg" alt = "photo.jpg"> </div>
+    <a href = "mailto:chenxy@std.uestc.edu.cn">chenxy@std.uestc.edu.cn</a>
+</div>@@
 @@html:<div class = "bio-right">@@
-* Xiaoyu Chen (陈小羽)
+@@html:<h2 id = "chinese-name"> 陈小羽 </h2><h2 id = "english-name"> Xiaoyu Chen </h2>@@
 I’m currently a first-year Ph.D. student at Department of Computer Science and Technology, [[http://www.nju.edu.cn/][Nanjing University]] and a member of [[http://tcs.nju.edu.cn][CS Theory Group]]. I’m advised by Professor [[http://tcs.nju.edu.cn/yinyt/Yitong_Yin_homepage.html][Yitong Yin]].
 
 Before I joined Nanjing University, I obtained B.Eng. degree from [[http://www.uestc.edu.cn/][University of Electronic Science and Technology of China]] in June 2020, where I majored in Computer Science and Technology and was advised by Professor [[https://sites.google.com/site/myxiao/Home][Mingyu Xiao]] and Professor [[http://en.uestc.edu.cn/info/1074/2709.htm][Yi Zhou]]. In this period, I mainly focus on design and analysis exact exponential algorithms for optimization problems on graph such as maximum weighted independent set or maximum relaxed cliques.
 @@html:</div>@@
 @@html:</section>@@
-
------
-
-Email: 2016060106020@std.uestc.edu.cn
-
-Office: Room 412, Department of Computer Science and Technology, Nanjing University Xianlin Campus
 
 -----
 
