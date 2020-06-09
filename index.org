@@ -3,9 +3,11 @@
 #+OPTIONS: creator:nil
 #+OPTIONS: date:nil
 #+OPTIONS: num:nil
+#+HTML_HEAD: <link rel = "icon" type = "png" href = "./pic/nju.png">
 #+HTML_HEAD: <script src="https://kit.fontawesome.com/62cac9f4f3.js" crossorigin="anonymous"></script>
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./css/index.css"/>
 #+HTML_HEAD: <script src="./script/modify_a.js" />
+
 @@html:<section class = "bio">@@
 @@html:
 <div class = "bio-left"> 

@@ -5,3 +5,9 @@ function addTarget(d, ev) {
     };
 }
 document.addEventListener("readystatechange", addTarget);
+
+function setTitle() {
+    var title = document.head.getElementsByTagName('title')[0];
+    title.innerHTML = "Xiaoyu";
+}
+setTitle();
