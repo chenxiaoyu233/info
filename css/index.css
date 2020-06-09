@@ -54,6 +54,25 @@ div.nju {
     z-index: 1;
 }
 
+.links {
+    display: flex;
+}
+
+.links a {
+    flex: auto;
+}
+
+.links a i {
+    width: -webkit-fill-available;
+}
+
+.links a i:before {
+    width: -webkit-fill-available;
+    text-align: center;
+    display: block;
+}
+
+
 div.bio-left {
     float: left;
 }
