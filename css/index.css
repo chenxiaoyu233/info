@@ -1,3 +1,12 @@
+@font-face {
+    font-family: "Monaco";
+    src: url("/font/Monaco.dfont");
+}
+
+html {
+    font-family: Monaco;
+}
+
 h1.title {
     text-align: left;
 }
