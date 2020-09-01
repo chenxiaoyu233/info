@@ -15,7 +15,7 @@
     <div class = "avatar"> <img src = "pic/photo.jpg" alt = "photo.jpg"> </div>
     <hr>
     <div class = "links"> 
-        <a href = "mailto:chenxy@std.uestc.edu.cn" id = "email" title = "chenxy@std.uestc.edu.cn" ><i class="fas fa-envelope fa-2x"></i></a>
+        <a href = "mailto:chenxiaoyu233@smail.nju.edu.cn" id = "email" title = "chenxiaoyu233@smail.nju.edu.cn" ><i class="fas fa-envelope fa-2x"></i></a>
         <a href = "https://www.github.com/chenxiaoyu233" id = "github" title = "github/chenxiaoyu233"><i class="fa fa-github fa-2x"></i></a>
     </div>
     <hr>
