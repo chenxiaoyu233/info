@@ -1,305 +1,159 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html>
+
 <head>
-<!-- 2020-09-01 Tue 23:01 -->
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>&lrm;</title>
-<meta name="generator" content="Org mode" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
-    padding: 3px;
-    border: 1px solid black;
-  }
-  pre.src:hover:before { display: inline;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
-</style>
-<link rel = "icon" type = "png" href = "./pic/nju.png">
-<script src="https://kit.fontawesome.com/62cac9f4f3.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="./css/index.css"/>
-<script src="./script/modify_a.js" />
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2019 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
+  <link rel="icon" type="png" href="./pic/nju.png">
+  <!-- online scripts -->
+  <script src="https://kit.fontawesome.com/62cac9f4f3.js" crossorigin="anonymous"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/index.css" />
+  <!-- local scripts -->
+  <script src="./script/modify_a.js"></script>
+  <script src="./script/pub-item.js"></script>
 </head>
+
 <body>
-<div id="content">
-<p>
-<section class = "bio">
-
-<div class = "bio-left"> 
-    <div class = "nju"> <img src = "pic/nju.png" alt = "nju.png"> </div>
-    <div class = "avatar"> <img src = "pic/photo.jpg" alt = "photo.jpg"> </div>
-    <hr>
-    <div class = "links"> 
-        <a href = "mailto:chenxiaoyu233@smail.nju.edu.cn" id = "email" title = "chenxiaoyu233@smail.nju.edu.cn" ><i class="fas fa-envelope fa-2x"></i></a>
-        <a href = "https://www.github.com/chenxiaoyu233" id = "github" title = "github/chenxiaoyu233"><i class="fa fa-github fa-2x"></i></a>
+  <!-- Bio -->
+  <section class="bio">
+    <div class="bio-left">
+      <div class="nju"> <img src="pic/nju.png" alt="nju.png"> </div>
+      <div class="avatar"> <img src="pic/photo.jpg" alt="photo.jpg"> </div>
+      <hr>
+      <div class="links">
+        <a href="mailto:chenxiaoyu233@smail.nju.edu.cn" id="email" title="chenxiaoyu233@smail.nju.edu.cn"><i
+            class="fas fa-envelope fa-2x"></i></a>
+        <a href="https://www.github.com/chenxiaoyu233" id="github" title="github/chenxiaoyu233"><i
+            class="fa fa-github fa-2x"></i></a>
+      </div>
+      <hr>
     </div>
-    <hr>
-</div>
-<div class = "bio-right">
-<h2 id = "chinese-name"> 陈小羽 </h2><h2 id = "english-name"> Xiaoyu Chen </h2>
-I’m currently a first-year Ph.D. student at the Department of Computer Science and Technology, <a href="http://www.nju.edu.cn/">Nanjing University</a>, and a member of <a href="http://tcs.nju.edu.cn">CS Theory Group</a>. I’m advised by Professor <a href="http://tcs.nju.edu.cn/yinyt/Yitong_Yin_homepage.html">Yitong Yin</a>.
-</p>
+    <div class="bio-right">
+      <h2 id="chinese-name" > 陈小羽 </h2>
+      <h2 id="english-name"> Xiaoyu Chen </h2>
+      <p>
+        I'm currently a second-year Ph.D. student at the Department of Computer Science and Technology,
+        <a href="http://www.nju.edu.cn/">Nanjing University</a>, and a member of <a href="http://tcs.nju.edu.cn">CS
+          Theory Group</a>. I'm advised by Professor <a
+          href="http://tcs.nju.edu.cn/yinyt/Yitong_Yin_homepage.html">Yitong Yin</a>.
+      </p>
+      <p>
+        Before I joined Nanjing University, I obtained B.Eng. degree from <a href="http://www.uestc.edu.cn/">UESTC</a> in June 2020, where I was adviced by Prof. <a href = "https://sites.google.com/site/myxiao/Home">Mingyu Xiao</a> and Dr. <a href = "https://sites.google.com/view/yi-zhou">Yi Zhou</a>.
+      </p>
+  </section>
 
-<p>
-Before I joined Nanjing University, I obtained B.Eng. degree from <a href="http://www.uestc.edu.cn/">University of Electronic Science and Technology of China</a> in June 2020, where I majored in Computer Science and Technology and was advised by Professor <a href="https://sites.google.com/site/myxiao/Home">Mingyu Xiao</a> and Professor <a href="http://en.uestc.edu.cn/info/1074/2709.htm">Yi Zhou</a>. In that period, I mainly focus on design and analyzing exact exponential algorithms for optimization problems on graphs such as the maximum weighted independent set or maximum relaxed cliques.
-</div>
-</section>
-</p>
+  <!-- Research Interests -->
+  <div class="outline-2">
+    <h2>Research Interests</h2>
+    <div class="outline-text-2">
+      <p>
+        I'm interested in theoretical computer science.
+        Currently, I focus on Markov chain Monte Carlo (MCMC) methods, which are widely used for approximate sampling and
+        counting.
+      </p>
+    </div>
+  </div>
 
+  <!-- Publications -->
+  <div class="outline-2">
+    <h2> Publications </h2>
+    <div class="outline-text-2" id="pub-target">
 
-<div id="outline-container-org06ee58b" class="outline-2">
-<h2 id="org06ee58b">Research Interests</h2>
-<div class="outline-text-2" id="text-org06ee58b">
-<p>
-I'm interested in the design and analysis of algorithms, especially approximate sampling and counting algorithms.
-</p>
-</div>
-</div>
+    <!--
+      <details class="pub-item">
+        <summary class="pub-summary"> Rapid mixing of Glauber dynamics via spectral independence for all degrees
+          <p class="coauthors">with <a>Weiming Feng</a>, <a>Yitong Yin</a> and <a>Xinyuan Zhang</a></p>
+          <div class="pub-info">
+            <div class="JC"> FOCS 2021 </div>
+            <div class="pub-links">
+              <a class="pub-link">arxiv</a>
+              <a class="pub-link">PDF</a>
+            </div>
+          </div>
+        </summary>
+        <p class="pub-intro"> test </p>
+      </details>
+    -->
 
-<div id="outline-container-orgd3ba8fc" class="outline-2">
-<h2 id="orgd3ba8fc">Awards &amp; Honors</h2>
-<div class="outline-text-2" id="text-orgd3ba8fc">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+      <script>
+        table = {
+          title: "Rapid mixing of Glauber dynamics via spectral independence for all degrees",
+          authors: [
+            { name: "Weiming Feng", link: "https://fwm94.github.io" },
+            { name: "Yitong Yin", link: "http://tcs.nju.edu.cn/yinyt/" },
+            { name: "Xinyuan Zhang", link: "" }
+          ],
+          JC: { category: "C", name: "FOCS 2021" },
+          links: [
+            { name: "arxiv", link: "https://arxiv.org/abs/2105.15005" },
+          ],
+          intro: 'Using field dynamics, we build a novel connection between "hard" distribution and "easy" distribution by shifting the local fields. Using our technique, we could boost the good results obtained by combinatorics techniques (such as coupling) to an extreme regime where these techniques can not apply directly. Hence, we obtain the first \\(f(\\delta) \\cdot \\mathrm{poly}(n)\\) type of mixing time for Glauber dynamics on anti-ferro \\(2\\)-spin systems, where \\(\\delta\\) is used to measure the "hardness" of the instance.'
+        };
+        add_pub(table);
+      </script>
 
+      <script>
+        table = {
+          title: "Exact algorithms for maximum weighted independent set on sparse graphs",
+          authors: [
+            { name: "Sen Huang", link: "" },
+            { name: "Mingyu Xiao", link: "https://sites.google.com/site/myxiao/Home" }
+          ],
+          JC: { category: "C", name: "COCOON 2021" },
+          links: [
+            { name: "PDF", link: "./pdf/weight-independent-set.pdf" }
+          ],
+          intro: 'This work was done when I was an undergraduate student at UESTC. We extend the reduction and branching rules from the original maximum independent set problem to the weighted version and use "measure-and-conquer" to analyze the branching process. To make things simple, we mainly consider the case where the average degree is bounded by \\(3\\). Currently, we obtained the best asymptotic running time in this case.'
+        };
+        add_pub(table);
+      </script>
 
-<colgroup>
-<col  class="org-left" />
+      <script>
+        table = {
+          title: "Computing maximum k-defective cliques in massive graphs",
+          authors: [
+            { name: "Yi Zhou", link: "https://sites.google.com/view/yi-zhou" }, 
+            { name: "Jin-Kao Hao", link: "http://www.info.univ-angers.fr/~hao/" },
+            { name: "Mingyu Xiao", link: "https://sites.google.com/site/myxiao/Home" }
+          ],
+          JC: { category: "J", name: "Comput. Oper. Res. 127 (2021)" },
+          links: [
+            { name: "PDF", link: "./pdf/k-defective.pdf"}
+          ],
+          intro: 'This work was done when I was an undergraduate student at UESTC. In this work, we implement a fast solver for a class of quasi-clique called \\(k\\)-defective clique. We design clever reduction and branching rules to accelerate the program and our implementation performs remarkably well on massive graphs.'
+        };
+        add_pub(table);
+      </script>
 
-<col  class="org-right" />
-</colgroup>
-<tbody>
-<tr>
-<td class="org-left">Silver Medal of The ACM-ICPC Asia Regional Contest, Beijing Site</td>
-<td class="org-right">2017</td>
-</tr>
+    </div>
+  </div>
 
-<tr>
-<td class="org-left">Rank 8 of IEEEXtreme 12.0 Programming Competition</td>
-<td class="org-right">2018</td>
-</tr>
+  <!-- Awards & Honors -->
+  <div class="outline-2">
+    <h2>Awards &amp; Honors</h2>
+    <div class="outline-text-2">
+      <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+        <tbody>
+          <tr>
+            <td class="org-left">Silver Medal of The ACM-ICPC Asia Regional Contest, Beijing Site</td>
+            <td>2017</td>
+          </tr>
 
-<tr>
-<td class="org-left">Outstanding Graduate (优秀毕业生) of UESTC</td>
-<td class="org-right">2020</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div id="postamble" class="status">
-<p class="date">Created: 2020-09-01 Tue 23:01</p>
-<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
-</div>
+          <tr>
+            <td class="org-left">Rank 8 of IEEEXtreme 12.0 Programming Competition</td>
+            <td>2018</td>
+          </tr>
+
+          <tr>
+            <td class="org-left">Outstanding Graduate (优秀毕业生) of UESTC</td>
+            <td>2020</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+
 </body>
+
 </html>

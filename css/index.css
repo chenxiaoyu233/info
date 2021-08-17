@@ -1,6 +1,18 @@
 @font-face {
     font-family: "Monaco";
-    src: url("/font/Monaco.dfont");
+    src: url("../font/monaco.ttf");
+}
+@font-face {
+    font-family: "TexGyre";
+    src: url("../font/texgyrepagella-regular.otf");
+}
+@font-face {
+    font-family: "TexGyre-bold";
+    src: url("../font/texgyrepagella-bold.otf");
+}
+@font-face {
+    font-family: "Kaiti";
+    src: url("../font/AdobeKaitiStd-Regular.otf");
 }
 
 html {
@@ -88,7 +100,7 @@ div.bio-left {
 
 h2#chinese-name {
     font-size: 50px;
-    font-family: cursive;
+    font-family: Kaiti;
 }
 
 div.bio-right {
@@ -133,4 +145,58 @@ td.org-left {
 
 #postamble, .validation a {
     color: rgba(0,0,0,0);
+}
+
+.pub-title, .coauthors {
+    margin: 0px;
+}
+
+.pub-info {
+    display: flex;
+    align-items: center;
+}
+
+.pub-links {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.pub-link {
+    color: black;
+    background-color:rgb(200, 200, 200);
+    border-radius: 5px; 
+    margin-left: 5px;
+}
+
+.pub-intro {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+.coauthors, .pub-info, .pub-intro {
+    margin-left: 22px;
+    margin-right: 18px;
+}
+
+.pub-summary {
+    font-family: TexGyre-bold;
+    font-size: 20px;
+}
+
+.coauthors, .pub-info, .pub-intro {
+    font-family: Monaco;
+    font-size: 17px;
+}
+
+.C {
+    color:tomato;
+}
+
+.J {
+    color:deeppink;
+}
+
+.pub-item {
+    margin-top: 15px;
 }
