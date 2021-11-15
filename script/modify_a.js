@@ -8,6 +8,6 @@ document.addEventListener("readystatechange", addTarget);
 
 function setTitle() {
     var title = document.head.getElementsByTagName('title')[0];
-    title.innerHTML = "Xiaoyu";
+    if(title != undefined) title.innerHTML = "Xiaoyu";
 }
 setTitle();
