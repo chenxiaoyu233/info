@@ -204,3 +204,7 @@ td.org-left {
 .pub-item {
     margin-top: 15px;
 }
+
+.org-right {
+    text-align: right;
+}
