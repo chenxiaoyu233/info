@@ -163,9 +163,11 @@ td.org-left {
 
 .pub-link {
     color: black;
-    background-color:rgb(200, 200, 200);
-    border-radius: 5px; 
-    margin-left: 5px;
+    background-color:rgb(230, 230, 230);
+    border-radius: 3px; 
+    margin-left: 3px;
+    padding:2px;
+    font-size: 14px;
 }
 
 .pub-intro {
