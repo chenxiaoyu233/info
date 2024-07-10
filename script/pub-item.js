@@ -52,8 +52,8 @@ authorLink = {
     "Heng Guo" : "https://homepages.inf.ed.ac.uk/hguo/",
     "Charlie Carlson" : "https://www.charlieintheory.com",
     "Eric Vigoda" : "https://sites.cs.ucsb.edu/~vigoda/",
-    "Mingyu Xiao" : "https://sites.google.com/site/myxiao/Home",
-    "Yi Zhou" : "https://sites.google.com/view/yi-zhou",
+    "Mingyu Xiao" : "https://sites.google.com/site/myxiao/",
+    "Yi Zhou" : "https://joey001.github.io",
     "Jin-Kao Hao" : "https://www.info.univ-angers.fr/~hao/",
 };
 
