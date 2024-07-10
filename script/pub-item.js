@@ -32,11 +32,7 @@ function html_to_element(html) {
 
 {
     title: "Rapid mixing of Glauber dynamics via spectral independence for all degrees",
-    authors: [
-        {name: "Weiming Feng", link: ""},
-        {name: "Yitong Yin", link: ""},
-        {name: "Xinyuan Zhang", link: ""}
-    ],
+    authors: [ "Weiming Feng", "Yitong Yin", "Xinyuan Zhang" ],
     JC: {category: "C", name: "FOCS 2021"},
     links: [
         {name: "arxiv", link: ""},
@@ -46,13 +42,28 @@ function html_to_element(html) {
 }
 
 */
+
+/* a naive database for coauthors */
+authorLink = {
+    "Weiming Feng" : "https://fwm94.github.io",
+    "Yitong Yin" : "https://tcs.nju.edu.cn/yinyt/",
+    "Xinyuan Zhang" : "https://sites.google.com/view/xinyuanzhang",
+    "Jingcheng Liu" : "https://liuexp.github.io",
+    "Heng Guo" : "https://homepages.inf.ed.ac.uk/hguo/",
+    "Charlie Carlson" : "https://www.charlieintheory.com",
+    "Eric Vigoda" : "https://sites.cs.ucsb.edu/~vigoda/",
+    "Mingyu Xiao" : "https://sites.google.com/site/myxiao/Home",
+    "Yi Zhou" : "https://sites.google.com/view/yi-zhou",
+    "Jin-Kao Hao" : "https://www.info.univ-angers.fr/~hao/",
+};
+
 function gen_pub_item(table) {
     template_item = `
       <details class="pub-item">
         <summary class="pub-summary"> ${table.title}
           <p class="coauthors"></p>
           <div class="pub-info">
-            <div class="${table.JC.category}"> ${table.JC.name} </div>
+            <div class="JC"> </div>
             <div class="pub-links"> </div>
           </div>
         </summary>
@@ -70,10 +81,22 @@ function gen_pub_item(table) {
         authors.appendChild(document.createTextNode(pre_text));
 
         author = table.authors[i];
-        template_author = `<a href="${author.link}">${author.name}</a>`;
-        if (author.link == "") template_author = `<a>${author.name}</a>`;
+        if (author in authorLink) 
+            template_author = `<a href="${authorLink[author]}">${author}</a>`;
+        else template_author = `<a>${author}</a>`;
         author_item = html_to_element(template_author);
         authors.appendChild(author_item);
+    }
+
+    // add journal & conference (JC) list
+    JC = item.getElementsByClassName('JC')[0];
+    for (let i = 0; i < table.JC.length; i++) {
+        conf = table.JC[i];
+        template_JC = `<div class="${conf.category}">${conf.name}</div>`;
+        JC_item = html_to_element(template_JC);
+        JC.appendChild(JC_item);
+        if (i < table.JC.length - 1) 
+            JC.appendChild(document.createTextNode(", "));
     }
 
     // add links list

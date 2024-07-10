@@ -27,7 +27,7 @@ body {
     padding-right: 30px;
     padding-left: 30px;
     min-width: 400px;
-    max-width: 800px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -36,7 +36,7 @@ p, a {
     font-size: 17px;
 }
 
-a {
+a[href^="http"], a[href^="mailto"], a[href^="file"], a[href^="."] {
     color: gray;
     text-decoration: none;
 }
@@ -162,12 +162,15 @@ td.org-left {
 }
 
 .pub-link {
-    color: black;
-    background-color:rgb(230, 230, 230);
     border-radius: 3px; 
-    margin-left: 3px;
+    margin: 3px;
     padding:2px;
     font-size: 14px;
+}
+
+.pub-link {
+    color: black;
+    background-color:rgb(230, 230, 230);
 }
 
 .pub-intro {
@@ -191,16 +194,22 @@ td.org-left {
     font-size: 17px;
 }
 
+.JC * {
+    display: inline;
+}
+
+/* color palettes for EVA unit 01 */
+
 .C {
-    color:tomato;
+    color: #60289B;
 }
 
 .J {
-    color:deeppink;
+    color: #F58D39;
 }
 
 .M {
-    color:cornflowerblue;
+    color: #B8E84C;
 }
 
 .pub-item {
