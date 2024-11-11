@@ -5,7 +5,7 @@
 \geometry{
   left = 2cm,
   right = 2cm,
-  top = 0cm,
+  top = 1.5cm,
   bottom = 1.5cm,
 }
 
@@ -23,7 +23,11 @@
 \usepackage{tabularx}
 \usepackage{multirow}
 
+%% to parse pubs.js
+\usepackage{luacode}
+
 \title{
+  \vspace*{-1.5cm}
   {\huge
   Xiaoyu Chen \\
   }
@@ -32,11 +36,12 @@
     \faEnvelope  & chenxiaoyu233@smail.nju.edu.cn & &
     \faMapMarker & 163 Xianlin Ave. \\
     \faHome      & chenxiaoyu233.github.io/info/  & &
-                 & Nanjing, Jiangsu Province
+                 & Nanjing, Jiangsu Province, China
   \end{tabularx}
   }
   \vspace{-2cm}
 }
+\author{}
 \date{}
 
 \begin{document}
@@ -49,11 +54,11 @@
 \vspace{-1em} \hrule \vspace{1em}
 
 \begin{tabularx}{\textwidth}{@{\hskip 0pt}l@{\hskip 0pt}X@{\hskip 0pt}r@{\hskip 0pt}}
-  \textbf{Ph.D.} in Computer Science (2020 --- \textbf{Present}) & & Nanjing University \\
-  Advisor: Professor Yitong Yin \\
+  \textbf{Ph.D. student} in Computer Science (2020 --- \textbf{Present}) & & Nanjing University \\
+  Advisor: Professor Yitong Yin & &\\
   \\
-  \textbf{B.Eng.} in Computer Science (2016 --- 2020) & & University of Electronic Science and Technology of China \\
-  Advisor: Professor Mingyu Xiao
+  \textbf{B.Eng.} in Computer Science (2016 --- 2020) & & University of Electronic Science  \\
+  Advisor: Professor Mingyu Xiao \& Yi Zhou & & and Technology of China
 \end{tabularx}
 
 \section*{Honors and Awards}
@@ -69,27 +74,135 @@
 \section*{Publications}
 \vspace{-1em} \hrule \vspace{1em}
 
-\begin{tabularx}{\textwidth}{@{\hskip 0pt}lX@{\hskip 0pt}}
-  5 & A near-linear time sampler for the Ising model with external field \hfill SODA 2023  \\
-    & with Xinyuan Zhang \hfill \\
-  \\
-  4 & Optimal mixing for two-state anti-ferromagnetic spin systems \hfill FOCS 2022 \\
-    & with Weiming Feng, Yitong Yin and Xinyuan Zhang \\
-  \\
-  3 & Rapid mixing of Glauber dynamics via spectral independence for all degrees \hfill FOCS 2021 \\
-    & with Weiming Feng, Yitong Yin and Xinyuan Zhang \hfill \textbf{Invited to SICOMP Special Issue} \\
-  \\
-  2 & Exact algorithms for maximum weighted independent set on sparse graphs \hfill COCOON 2021 \\
-    & with Sen Huang and Mingyu Xiao \\
-  \\
-  1 & Computing maximum k-defective cliques in massive graphs \hfill Comput. Oper. Res. 127 (2021) \\
-    & with Yi Zhou, Jin-Kao Hao and Mingyu Xiao
-\end{tabularx}
+\begin{luacode}
+  -- read the publication list from file
+  function read_file(filename)
+    local file = io.open(filename, "r")
+    local content = file:read("*all")
+    file:close()
+    return content
+  end
+  local json = require "dkjson"
+  local content = read_file("../script/pubs.js")
+  -- texio.write(content)
+  local pos, err = nil, nil
+  obj, pos, err = json.decode(content, 9, nil)
+\end{luacode}
+
+
+\begin{luacode}
+  -- get author list
+  function get_authors(obj, i) 
+    local authors = ""
+    local lst = obj[i]["authors"]
+    for i = 1, #lst do
+      authors = authors .. lst[i]
+      if i < #lst then
+        authors = authors .. ", "
+      end
+    end
+    return authors
+  end
+
+  -- get conference name and journal name
+  function get_CJM(obj, i)
+    local C, J, M = "", "", "" 
+    local lst = obj[i]["JC"]
+    for j = 1, #lst do
+      if lst[j]["category"] == "C" then
+        C = lst[j]["name"]
+      end
+      if lst[j]["category"] == "M" then
+        M = lst[j]["name"]
+      end
+      if lst[j]["category"] == "J" then
+        J = lst[j]["name"]
+      end
+    end
+    return C, J, M
+  end
+
+  function print_items(items)
+    tex.print("\\begin{tabularx}{\\textwidth}{@{\\hskip 0pt}lX@{\\hskip 0pt}}")
+    for i = 1, #items do
+      tex.print(#items - i + 1 .. items[i][1])
+      tex.print(items[i][2])
+      if i < #items then
+        tex.print("\\\\")
+      end
+    end
+    tex.print("\\end{tabularx}")
+  end
+\end{luacode}
+
+\begin{luacode}
+  local items = {}
+  for i = 1, #obj do
+    local C, J, M = get_CJM(obj, i)
+    local authors = get_authors(obj, i)
+    -- filter
+    if C ~= "" or J ~= "" then
+      table.insert(items, {
+        " & " .. obj[i]["title"] .. " \\hfill " .. C .. "\\\\",
+        " & with " .. authors .. " \\hfill " .. J .. "\\\\"
+      })
+    end
+  end
+  print_items(items)
+\end{luacode}
+
+%\begin{tabularx}{\textwidth}{@{\hskip 0pt}lX@{\hskip 0pt}}
+%  5 & A near-linear time sampler for the Ising model with external field \hfill SODA 2023  \\
+%    & with Xinyuan Zhang \hfill \\
+%  \\
+%  4 & Optimal mixing for two-state anti-ferromagnetic spin systems \hfill FOCS 2022 \\
+%    & with Weiming Feng, Yitong Yin and Xinyuan Zhang \\
+%  \\
+%  3 & Rapid mixing of Glauber dynamics via spectral independence for all degrees \hfill FOCS 2021 \\
+%    & with Weiming Feng, Yitong Yin and Xinyuan Zhang \hfill \textbf{Invited to SICOMP Special Issue} \\
+%  \\
+%  2 & Exact algorithms for maximum weighted independent set on sparse graphs \hfill COCOON 2021 \\
+%    & with Sen Huang and Mingyu Xiao \\
+%  \\
+%  1 & Computing maximum k-defective cliques in massive graphs \hfill Comput. Oper. Res. 127 (2021) \\
+%    & with Yi Zhou, Jin-Kao Hao and Mingyu Xiao
+%\end{tabularx}
+
+\section*{Manuscript}
+\vspace{-1em} \hrule \vspace{1em}
+
+\begin{luacode}
+  local items = {}
+  for i = 1, #obj do
+    local C, J, M = get_CJM(obj, i)
+    local authors = get_authors(obj, i)
+    -- filter
+    if C == "" and J == "" then
+      table.insert(items, {
+        " & " .. obj[i]["title"] .. " \\hfill " .. C .. "\\\\",
+        " & with " .. authors .. " \\hfill " .. J .. "\\\\"
+      })
+    end
+  end
+  print_items(items)
+\end{luacode}
 
 \section*{Talks}
 \vspace{-1em} \hrule \vspace{1em}
 
 \begin{tabularx}{\textwidth}{@{\hskip 0pt}lX@{\hskip 0pt}}
+Near-linear time samplers for matroid independent sets with applications \\
+\hspace{20pt} RANDOM, 2024 \\
+\\
+Analyzing Mixing Time of Random Walks via High-dimensional Expander \\
+\hspace{20pt} Summer School, The Beauty of Theoretical Computer Science, 2024\\
+\\
+Uniqueness and rapid mixing in the bipartite hardcore model. & \\
+\hspace{20pt} Markov Chain Monte Carlo 2.0 (NII Shonan meeting No.186), 2023 \\
+\hspace{20pt} FOCS, 2023\\
+\hspace{20pt} Seminar Talk, UCSB, 2023\\
+\hspace{20pt} Seminar Talk, SCMS Student Seminar, 2023\\
+\\
 Field dynamics: A new algorithmic tool for fast Gibbs sampling without degree restriction. & \\
 \hspace{20pt} CCF TCS PhD Forum, online, 2022
 \end{tabularx}
@@ -98,7 +211,7 @@ Field dynamics: A new algorithmic tool for fast Gibbs sampling without degree re
 \vspace{-1em} \hrule \vspace{1em}
 
 \begin{tabularx}{\textwidth}{@{\hskip 0pt}lXrr@{\hskip 0pt}}
-  \large Computation Method & & Nanjing University & Spring 2022 \\
+  \large Computation Method & & Nanjing University & Spring 2022, Spring 2023 \\
   Instructor: Jingcheng Liu \\
   \\
   \large Advanced Algorithms & & Nanjing University & Fall 2021 \\ 
@@ -108,7 +221,7 @@ Field dynamics: A new algorithmic tool for fast Gibbs sampling without degree re
 \section*{Service}
 \vspace{-1em} \hrule \vspace{1em}
 
-External reviewer for: RANDOM 2022
+External reviewer for: RANDOM 2022, SODA 2024
 
 \end{document}
 
