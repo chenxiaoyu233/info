@@ -27,7 +27,7 @@
 \usepackage{luacode}
 
 \title{
-  \vspace*{-1.5cm}
+  %\vspace*{-1.0cm}
   {\huge
   Xiaoyu Chen \\
   }
@@ -47,7 +47,7 @@
 \begin{document}
 \maketitle
 
-\section*{Research Interests \hfill {\normalsize \normalfont Theoretical computer science, Markov chains}}
+\section*{Research Interests \hfill {\normalsize \normalfont Randomized algorithms, MCMC methods, Statistical physics phase transitions}}
 \vspace{-1em} \hrule \vspace{1em}
 
 \section*{Education}
@@ -168,6 +168,7 @@
 %    & with Yi Zhou, Jin-Kao Hao and Mingyu Xiao
 %\end{tabularx}
 
+\clearpage
 \section*{Manuscript}
 \vspace{-1em} \hrule \vspace{1em}
 
@@ -178,9 +179,13 @@
     local authors = get_authors(obj, i)
     -- filter
     if C == "" and J == "" then
+      local ell = #(obj[i]["links"])
+      local link = obj[i]["links"][ell]["link"]
+      ell = #link
+      link = string.sub(link, ell-9, ell)
       table.insert(items, {
         " & " .. obj[i]["title"] .. " \\hfill " .. C .. "\\\\",
-        " & with " .. authors .. " \\hfill " .. J .. "\\\\"
+        " & with " .. authors .. " \\hfill " .. "arXiv:" .. link .. "\\\\"
       })
     end
   end
