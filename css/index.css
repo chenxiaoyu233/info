@@ -177,6 +177,7 @@ td.org-left {
     border-style: solid;
     border-width: 2px;
     border-radius: 5px;
+    margin-left: 27px;
 }
 
 .coauthors, .pub-info, .pub-intro {
