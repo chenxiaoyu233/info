@@ -30,6 +30,7 @@ Tables = [
         "authors": ["Charlie Carlson", "Weiming Feng", "Eric Vigoda"],
         "JC": [{ "category": "C", "name": "SODA 2025" }],
         "links": [
+            { "name": "slides@SODA", "link": "./slides/SODA25-edge-coloring.pdf" },
             { "name": "arXiv", "link": "https://arxiv.org/abs/2407.04576" },
         ],
         "intro": ""
