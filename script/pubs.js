@@ -1,8 +1,26 @@
 Tables = [
     {
+        "title": "Faster mixing of the Jerrum-Sinclair chain",
+        "authors": ["Weiming Feng", "Zhe Ju", "Tianshun Miao", "Yitong Yin", "Xinyuan Zhang"],
+        "JC": [{ "category": "M", "name": "Manuscript" }],
+        "links": [
+            { "name": "arXiv", "link": "https://arxiv.org/abs/2504.02740" },
+        ],
+        "intro": ""
+    },
+    {
+        "title": "Rapid Mixing on Random Regular Graphs beyond Uniqueness",
+        "authors": ["Zejia Chen", "Zongchen Chen", "Yitong Yin", "Xinyuan Zhang"],
+        "JC": [{ "category": "M", "name": "Manuscript" }],
+        "links": [
+            { "name": "arXiv", "link": "https://arxiv.org/abs/2504.03406" },
+        ],
+        "intro": ""
+    },
+    {
         "title": "Rapid Mixing at the Uniqueness Threshold",
         "authors": ["Zongchen Chen", "Yitong Yin", "Xinyuan Zhang"],
-        "JC": [{ "category": "M", "name": "Manuscript" }],
+        "JC": [{ "category": "C", "name": "STOC 2025" }],
         "links": [
             { "name": "arXiv", "link": "https://arxiv.org/abs/2411.03413" },
         ],
