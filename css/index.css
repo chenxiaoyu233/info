@@ -55,11 +55,11 @@ div.bio-left img {
 }
 
 .avatar img {
-    clip-path: circle(106px at 114px 114px);
+    clip-path: path('M 8,114 C 8,40.3 55.3,8 114,8 C 172.7,8 220,40.3 220,114 L 220, 316 L 8, 316 Z');
 }
 
 div.avatar {
-    clip-path: circle(113px at 114px 114px);
+    clip-path: path('M 0,114 C 0, 34.8 51.8, 0 114, 0 C 176.2, 0 228, 34.8 228, 114 L 228, 324 L 0, 324 Z');
     background: #607D8B;
 }
 
