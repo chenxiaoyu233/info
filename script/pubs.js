@@ -9,7 +9,7 @@ Tables = [
         "intro": ""
     },
     {
-        "title": "Rapid Mixing on Random Regular Graphs beyond Uniqueness",
+        "title": "Rapid mixing on random regular graphs beyond uniqueness",
         "authors": ["Zejia Chen", "Zongchen Chen", "Yitong Yin", "Xinyuan Zhang"],
         "JC": [{ "category": "M", "name": "Manuscript" }],
         "links": [
@@ -18,7 +18,7 @@ Tables = [
         "intro": ""
     },
     {
-        "title": "Rapid Mixing at the Uniqueness Threshold",
+        "title": "Rapid mixing at the uniqueness threshold",
         "authors": ["Zongchen Chen", "Yitong Yin", "Xinyuan Zhang"],
         "JC": [{ "category": "C", "name": "STOC 2025" }],
         "links": [
@@ -35,7 +35,7 @@ Tables = [
         ],
         "intro": ""
     },
-    {   "title": "Rapid Mixing via Coupling Independence for Spin Systems with Unbounded Degree",
+    {   "title": "Rapid mixing via coupling independence for spin systems with unbounded degree",
         "authors": ["Weiming Feng"],
         "JC": [{ "category": "M", "name": "Manuscript" }],
         "links": [
@@ -44,7 +44,7 @@ Tables = [
         "intro": ""
     },
     {
-        "title": "Optimal Mixing for Randomly Sampling Edge Colorings on Trees Down to the Max Degree",
+        "title": "Optimal mixing for randomly sampling edge colorings on trees down to the max degree",
         "authors": ["Charlie Carlson", "Weiming Feng", "Eric Vigoda"],
         "JC": [{ "category": "C", "name": "SODA 2025" }],
         "links": [
@@ -54,7 +54,7 @@ Tables = [
         "intro": ""
     },
     {
-        "title": "Spectral Independence Beyond Total Influence on Trees and Related Graphs",
+        "title": "Spectral independence beyond total influence on trees and related graphs",
         "authors": ["Xiongxin Yang", "Yitong Yin", "Xinyuan Zhang"],
         "JC": [{ "category": "C", "name": "SODA 2025" }],
         "links": [
