@@ -2,7 +2,7 @@ Tables = [
     {
         "title": "Faster mixing of the Jerrum-Sinclair chain",
         "authors": ["Weiming Feng", "Zhe Ju", "Tianshun Miao", "Yitong Yin", "Xinyuan Zhang"],
-        "JC": [{ "category": "M", "name": "Manuscript" }],
+        "JC": [{ "category": "C", "name": "FOCS 2025" }],
         "links": [
             { "name": "arXiv", "link": "https://arxiv.org/abs/2504.02740" },
         ],
@@ -11,9 +11,18 @@ Tables = [
     {
         "title": "Rapid mixing on random regular graphs beyond uniqueness",
         "authors": ["Zejia Chen", "Zongchen Chen", "Yitong Yin", "Xinyuan Zhang"],
-        "JC": [{ "category": "M", "name": "Manuscript" }],
+        "JC": [{ "category": "C", "name": "FOCS 2025" }],
         "links": [
             { "name": "arXiv", "link": "https://arxiv.org/abs/2504.03406" },
+        ],
+        "intro": ""
+    },
+    {
+        "title": "Deterministic counting from coupling independence",
+        "authors": ["Weiming Feng", "Heng Guo", "Xinyuan Zhang", "Zongrui Zou"],
+        "JC": [{ "category": "C", "name": "FOCS 2025" }],
+        "links": [
+            { "name": "arXiv", "link": "https://arxiv.org/abs/2410.23225" },
         ],
         "intro": ""
     },
@@ -26,20 +35,20 @@ Tables = [
         ],
         "intro": ""
     },
-    {
-        "title": "Deterministic counting from coupling independence",
-        "authors": ["Weiming Feng", "Heng Guo", "Xinyuan Zhang", "Zongrui Zou"],
-        "JC": [{ "category": "M", "name": "Manuscript" }],
+    {   "title": "Rapid mixing via coupling independence for spin systems with unbounded degree",
+        "authors": ["Weiming Feng"],
+        "JC": [{ "category": "C", "name": "RANDOM 2025" }],
         "links": [
-            { "name": "arXiv", "link": "https://arxiv.org/abs/2410.23225" },
+            { "name": "slides@RANDOM", "link": "./slides/random25.pdf" },
+            { "name": "arXiv", "link": "https://arxiv.org/abs/2407.04672" },
         ],
         "intro": ""
     },
-    {   "title": "Rapid mixing via coupling independence for spin systems with unbounded degree",
-        "authors": ["Weiming Feng"],
-        "JC": [{ "category": "M", "name": "Manuscript" }],
+    {   "title": "Efficient Parallel Ising Samplers via Localization Schemes",
+        "authors": ["Hongyang Liu", "Yitong Yin", "Xinyuan Zhang"],
+        "JC": [{ "category": "C", "name": "RANDOM 2025" }],
         "links": [
-            { "name": "arXiv", "link": "https://arxiv.org/abs/2407.04672" },
+            { "name": "arXiv", "link": "https://arxiv.org/abs/2505.05185" },
         ],
         "intro": ""
     },

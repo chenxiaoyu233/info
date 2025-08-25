@@ -36,6 +36,10 @@ p, a {
     font-size: 17px;
 }
 
+div.bio-right p {
+    text-align:justify
+}
+
 a[href^="http"], a[href^="mailto"], a[href^="file"], a[href^="."] {
     color: gray;
     text-decoration: none;
