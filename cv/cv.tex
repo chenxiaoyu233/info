@@ -21,6 +21,7 @@
 \usepackage{fontawesome}
 
 \usepackage{tabularx}
+\usepackage{xltabular}
 \usepackage{multirow}
 
 %% to parse pubs.js
@@ -33,10 +34,10 @@
   }
   {\small
   \begin{tabularx}{\textwidth}{l@{\hskip 3pt}lXl@{\hskip 3pt}l}
-    \faEnvelope  & chenxiaoyu233@smail.nju.edu.cn & &
-    \faMapMarker & 163 Xianlin Ave. \\
+    \faEnvelope  & xiaoyu@mit.edu & &
+    \faMapMarker & 32-D566 \\
     \faHome      & chenxiaoyu233.github.io/info/  & &
-                 & Nanjing, Jiangsu Province, China
+                 & MIT, Cambridge, US 
   \end{tabularx}
   }
   \vspace{-2cm}
@@ -50,11 +51,19 @@
 \section*{Research Interests \hfill {\normalsize \normalfont Randomized algorithms, MCMC methods, Statistical physics phase transitions}}
 \vspace{-1em} \hrule \vspace{1em}
 
+\section*{Appointments}
+\vspace{-1em} \hrule \vspace{1em}
+
+\begin{tabularx}{\textwidth}{@{\hskip 0pt}l@{\hskip 0pt}X@{\hskip 0pt}r@{\hskip 0pt}}
+  \textbf{Postdoctoral Associate} in Computer Science (2025 --- \textbf{present}) & & Massachusetts Institute of Technology \\
+  & & LIDS
+\end{tabularx}
+
 \section*{Education}
 \vspace{-1em} \hrule \vspace{1em}
 
 \begin{tabularx}{\textwidth}{@{\hskip 0pt}l@{\hskip 0pt}X@{\hskip 0pt}r@{\hskip 0pt}}
-  \textbf{Ph.D. student} in Computer Science (2020 --- \textbf{Present}) & & Nanjing University \\
+  \textbf{Ph.D. student} in Computer Science (2020 --- 2025) & & Nanjing University \\
   Advisor: Professor Yitong Yin & &\\
   \\
   \textbf{B.Eng.} in Computer Science (2016 --- 2020) & & University of Electronic Science  \\
@@ -123,7 +132,7 @@
   end
 
   function print_items(items)
-    tex.print("\\begin{tabularx}{\\textwidth}{@{\\hskip 0pt}lX@{\\hskip 0pt}}")
+    tex.print("\\begin{xltabular}{\\textwidth}{@{\\hskip 0pt}lX@{\\hskip 0pt}}")
     for i = 1, #items do
       tex.print(#items - i + 1 .. items[i][1])
       tex.print(items[i][2])
@@ -131,7 +140,7 @@
         tex.print("\\\\")
       end
     end
-    tex.print("\\end{tabularx}")
+    tex.print("\\end{xltabular}")
   end
 \end{luacode}
 
@@ -168,7 +177,6 @@
 %    & with Yi Zhou, Jin-Kao Hao and Mingyu Xiao
 %\end{tabularx}
 
-\clearpage
 \section*{Manuscript}
 \vspace{-1em} \hrule \vspace{1em}
 
@@ -196,6 +204,12 @@
 \vspace{-1em} \hrule \vspace{1em}
 
 \begin{tabularx}{\textwidth}{@{\hskip 0pt}lX@{\hskip 0pt}}
+Rapid mixing via coupling independence for spin systems with unbounded degree\\
+\hspace{20pt} RANDOM, 2025\\
+\\
+Optimal mixing for randomly sampling edge colorings on trees down to the max degree \\
+\hspace{20pt} SODA, 2025 \\
+\\
 Near-linear time samplers for matroid independent sets with applications \\
 \hspace{20pt} RANDOM, 2024 \\
 \\
@@ -226,7 +240,7 @@ Field dynamics: A new algorithmic tool for fast Gibbs sampling without degree re
 \section*{Service}
 \vspace{-1em} \hrule \vspace{1em}
 
-External reviewer for: RANDOM 2022, SODA 2024, STOC 2025, COCOON 2025
+External reviewer for: RANDOM 2022, SODA 2024, STOC 2025, COCOON 2025, SODA 2025
 
 \end{document}
 
