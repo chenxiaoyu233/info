@@ -4,6 +4,7 @@ Tables = [
         "authors": ["Weiming Feng", "Zhe Ju", "Tianshun Miao", "Yitong Yin", "Xinyuan Zhang"],
         "JC": [{ "category": "C", "name": "FOCS 2025" }],
         "links": [
+            { "name": "slides@A&C-MIT", "link": "./slides/A&C-MIT.pdf" },
             { "name": "arXiv", "link": "https://arxiv.org/abs/2504.02740" },
         ],
         "intro": ""
