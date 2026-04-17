@@ -29,6 +29,8 @@
       <div class="links">
         <a href="mailto:xiaoyu@mit.edu" id="email" title="xiaoyu@mit.edu"><i
             class="fas fa-envelope fa-2x"></i></a>
+        <a href="./cv/cv.pdf" id="cv" title="cv"><i
+            class="fa fa-id-card-o fa-2x"></i></a>
         <a href="https://www.github.com/chenxiaoyu233" id="github" title="github/chenxiaoyu233"><i
             class="fa fa-github fa-2x"></i></a>
       </div>
@@ -87,12 +89,24 @@
         Tables.forEach(element => {
           add_pub(element);
         });
+
+        // the following code forbids the expansion of <details>
+        document.querySelectorAll('details > summary')
+        .forEach(summary => {
+          summary.addEventListener('click', function (e) {
+            // If the click is on a link (or inside one), allow it
+            if (e.target.closest('a')) return;
+
+            // Otherwise prevent the toggle
+            e.preventDefault();
+          });
+        });
       </script>
     </div>
   </div>
 
   <!-- Awards & Honors -->
-  <div class="outline-2">
+  <!-- <div class="outline-2">
     <h2>Awards &amp; Honors</h2>
     <div class="outline-text-2">
       <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
@@ -119,10 +133,10 @@
         </tbody>
       </table>
     </div>
-  </div>
+  </div> -->
 
   <!-- Teaching Assistantships -->
-  <div class="outline-2">
+  <!-- <div class="outline-2">
     <h2>Teaching Assistantships</h2>
     <div class="outline-text-2">
       <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
@@ -142,10 +156,10 @@
         </tbody>
       </table>
     </div>
-  </div>
+  </div> -->
 
   <!-- Services -->
-  <div class="outline-2">
+  <!-- <div class="outline-2">
     <h2>Services</h2>
     <div class="outline-text-2">
       <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
@@ -156,8 +170,9 @@
         </tbody>
       </table>
     </div>
-  </div>
+  </div> -->
 
+<div style="height: 100px;"></div>
 </body>
 
 

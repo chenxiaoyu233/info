@@ -45,6 +45,7 @@ function html_to_element(html) {
 
 /* a naive database for coauthors */
 authorLink = {
+    "Kuikui Liu" : "https://kuikuiliu.github.io",
     "Hongyang Liu" : "https://lhy-gispzjz.github.io",
     "Zongchen Chen" : "https://sites.gatech.edu/zongchenchen/",
     "Weiming Feng" : "https://fwm94.github.io",

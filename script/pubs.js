@@ -1,5 +1,23 @@
 Tables = [
     {
+        "title": "Edge-tilting field dynamics: rapid mixing at the uniqueness threshold and optimal mixing for Swendsen-Wang dynamics",
+        "authors": ["Zhe Ju", "Tianshun Miao", "Yitong Yin", "Xinyuan Zhang"],
+        "JC": [{ "category": "M", "name": "Manuscript" }],
+        "links": [
+            { "name": "arXiv", "link": "https://arxiv.org/abs/2604.10525" },
+        ],
+        "intro": ""
+    },
+    {
+        "title": "Subquadratic counting via perfect marginal sampling",
+        "authors": ["Zongchen Chen", "Kuikui Liu", "Xinyuan Zhang"],
+        "JC": [{ "category": "M", "name": "Manuscript" }],
+        "links": [
+            { "name": "arXiv", "link": "https://arxiv.org/abs/2604.02235" },
+        ],
+        "intro": ""
+    },
+    {
         "title": "Faster mixing of the Jerrum-Sinclair chain",
         "authors": ["Weiming Feng", "Zhe Ju", "Tianshun Miao", "Yitong Yin", "Xinyuan Zhang"],
         "JC": [{ "category": "C", "name": "FOCS 2025" }],
@@ -45,7 +63,7 @@ Tables = [
         ],
         "intro": ""
     },
-    {   "title": "Efficient Parallel Ising Samplers via Localization Schemes",
+    {   "title": "Efficient parallel Ising samplers via localization schemes",
         "authors": ["Hongyang Liu", "Yitong Yin", "Xinyuan Zhang"],
         "JC": [{ "category": "C", "name": "RANDOM 2025" }],
         "links": [

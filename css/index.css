@@ -224,3 +224,8 @@ td.org-left {
 .org-right {
     text-align: right;
 }
+
+details summary {
+  padding-left: 1.5em;
+  text-indent: -1.2em;
+}
