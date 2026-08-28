@@ -87,7 +87,16 @@
       <script src="./script/pubs.js"></script>
       <script>
         Tables.forEach(element => {
-          add_pub(element);
+          if(Object.hasOwn(element, "AI")) add_pub(element);
+        });
+      </script>
+      <div class="pub-divider" role="separator">
+        <span>The works listed above were completed after the launch of GPT-5.6.</span>
+      </div>
+
+      <script>
+        Tables.forEach(element => {
+          if(!Object.hasOwn(element, "AI")) add_pub(element);
         });
 
         // the following code forbids the expansion of <details>

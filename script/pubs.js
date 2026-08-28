@@ -1,5 +1,25 @@
 Tables = [
     {
+        "title": "Faster \\(\\textsf{FPRAS}\\) for the permanent via restricted Poincaré inequalities and coupled flows",
+        "authors": ["Eric Vigoda", "Xiongxin Yang"],
+        "JC": [{ "category": "M", "name": "Manuscript" }],
+        "links": [
+            { "name": "arXiv", "link": "https://arxiv.org/abs/2608.26599" },
+        ],
+        "intro": "",
+        "AI": "GPT-5.6 Pro Ultra"
+    },
+    {
+        "title": "A spectral local-to-global principle for spin systems on graphs with girth at least five",
+        "authors": ["Kuikui Liu"],
+        "JC": [{ "category": "M", "name": "Manuscript" }],
+        "links": [
+            { "name": "arXiv", "link": "https://arxiv.org/abs/2608.25491" },
+        ],
+        "intro": "",
+        "AI": "GPT-5.6 Pro Ultra"
+    },
+    {
         "title": "Edge-tilting field dynamics: rapid mixing at the uniqueness threshold and optimal mixing for Swendsen-Wang dynamics",
         "authors": ["Zhe Ju", "Tianshun Miao", "Yitong Yin", "Xinyuan Zhang"],
         "JC": [{ "category": "M", "name": "Manuscript" }],
@@ -11,7 +31,7 @@ Tables = [
     {
         "title": "Subquadratic counting via perfect marginal sampling",
         "authors": ["Zongchen Chen", "Kuikui Liu", "Xinyuan Zhang"],
-        "JC": [{ "category": "M", "name": "Manuscript" }],
+        "JC": [{ "category": "C", "name": "FOCS 2026" }],
         "links": [
             { "name": "arXiv", "link": "https://arxiv.org/abs/2604.02235" },
         ],
